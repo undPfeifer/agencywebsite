@@ -34,7 +34,7 @@ const loadMusicFiles = async () => {
     musicFiles.value = shuffle(
       data
         .filter(file => file.name.endsWith('.mp3'))
-        .map(file => `${supabaseUrl}/storage/v1/object/public/music/${file.name}`)
+        .map(file => `${supabaseUrl}/storage/v1/object/public/agencymusic/${file.name}`)
     )
 
     console.log('Playlist from Supabase:', musicFiles.value)
