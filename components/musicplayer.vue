@@ -122,6 +122,7 @@ section {
   position: fixed;
   bottom: 4px;
   left: 4px;
+  z-index: 10000;
 }
 
 div {
