@@ -40,7 +40,6 @@
 
     </article>
 
-    <music />
 </template>
 
 <style scoped>

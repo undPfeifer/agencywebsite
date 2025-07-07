@@ -8,6 +8,8 @@
 
   <NuxtPage /> 
 
+  <musicplayer />
+
   <mobile-nav />
   
 </template>

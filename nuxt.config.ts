@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/a/',  // Keep this as your repo name with leading/trailing slashes
+    baseURL: process.env.NODE_ENV === 'production' ? '/a/' : '/', // 👈 use /a/ only for production
     // I suggest removing buildAssetsDir unless you have a specific reason
     // buildAssetsDir: 'tryagain/'
   }
