@@ -4,17 +4,23 @@ export default defineNuxtConfig({
   modules: ['@nuxt/fonts', '@nuxt/image', '@nuxt/content'],
   content: {
     markdown: {
-      // enable custom components in markdown
       components: true
     }
-  }, // <- Added missing comma here
+  },
   nitro: {
     prerender: {
-      ignore: ['/sitemap.xml']
+      ignore: ['/sitemap.xml'],
+      // ensure all dynamic routes with content are prerendered
+      routes: [
+        '/', 
+        // add other paths if needed, or
+        // consider using `crawl: true` if you want Nitro to auto-detect routes
+      ]
     }
   },
   app: {
-    baseURL: '/agency/', // Replace with your actual repo name
-    buildAssetsDir: 'tryagain/'
+    baseURL: '/agencywebsite/',  // Keep this as your repo name with leading/trailing slashes
+    // I suggest removing buildAssetsDir unless you have a specific reason
+    // buildAssetsDir: 'tryagain/'
   }
 })
