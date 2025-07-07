@@ -7,17 +7,17 @@ description: "Stückzeitung für die Theateraufführung von Lars von Triers «Do
 date: 2023-10-06
 draft: false
 tags: [ 'editorial' , 'print']
-thumbnail: '/img/vivi/dogville/stueckzeitung5.jpg'
+thumbnail: './img/vivi/dogville/stueckzeitung5.jpg'
 slug: 'dogville'
 logo-nav: 'vivi'
-song: '/25.06.28_father love-01-01.mp3'
+song: './25.06.28_father love-01-01.mp3'
 ---
 
 
 
 
 
-::blogImg{src="/img/vivi/dogville/stueckzeitung2.jpg"}
+::blogImg{src="./img/vivi/dogville/stueckzeitung2.jpg"}
 ::
 
 

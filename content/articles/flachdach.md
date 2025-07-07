@@ -7,17 +7,17 @@ description: "Flyer und Präsentation für das Symposium zu Thema Sicherheit der
 date: 2023-10-06
 draft: false
 tags: ['Web' , 'Redesign' , 'CMS']
-thumbnail: '/img/fladapla/1.png'
+thumbnail: './img/fladapla/1.png'
 slug: 'flachdach'
 logo-nav: 'flachdach'
-song: '/25.06.28_father love-01-01.mp3'
+song: './25.06.28_father love-01-01.mp3'
 ---
 
 
 
 
 
-::blogImg{src="/img/fladapla/1.png"}
+::blogImg{src="./img/fladapla/1.png"}
 ::
 
 
@@ -31,14 +31,14 @@ In diesem Projekt hatte ich das Privileg, eine Vielzahl von Aufgaben zu überneh
 ::
 
 
-::blogImg{src="/img/fladapla/2.png"}
+::blogImg{src="./img/fladapla/2.png"}
 ::
 
 
-::blogImg{src="/img/fladapla/3.png"}
+::blogImg{src="./img/fladapla/3.png"}
 ::
 
-::blogImg{src="/img/fladapla/4.png"}
+::blogImg{src="./img/fladapla/4.png"}
 ::
 
 
