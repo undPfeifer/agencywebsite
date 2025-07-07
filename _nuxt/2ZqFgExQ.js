@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as r,a as s}from"./Dg7QLVXh.js";const c={props:{src:{type:String,required:!0},alt:{type:String,default:""}}},o=["src","alt"];function n(l,_,t,d,i,p){return r(),a("div",null,[s("img",{src:t.src,alt:t.alt},null,8,o)])}const f=e(c,[["render",n],["__scopeId","data-v-6240b8b1"]]);export{f as default};
