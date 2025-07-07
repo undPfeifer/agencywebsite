@@ -1,166 +1,157 @@
-<template>
-    <section>
-      <div @mouseenter="showMore = true" @mouseleave="showMore = false">
-        <button v-if="!isPlaying" @click="play"></button>
-        <button v-else @click="pause">o</button>
-        <NuxtLink to="https://undpfeifer.github.io/dedimispotify/" v-if="isPlaying && showMore">
-          <h1>more</h1>
-        </NuxtLink>
-      </div>
-    </section>
-  </template>
+<script>
+import { ref, reactive, onMounted, watch } from 'vue'
+import { createClient } from '@supabase/supabase-js'
 
+export default {
+  name: 'RandomPlayer',
+  setup() {
+    // Replace with your actual Supabase info
+    const supabaseUrl = 'https://kifdamniffzvjqrioqic.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtpZmRhbW5pZmZ6dmpxcmlvcWljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM4NTQ5NTgsImV4cCI6MjA0OTQzMDk1OH0.v4_-ZDTWMgFpClLf7aEXO3KpqDfTjNFWuoFT4fijQIA';
+                // replace this
+const bucketName = 'music' 
 
+    const supabase = createClient(supabaseUrl, supabaseKey)
 
+    const files = ref([])          // list of files (song names)
+    const isPlaying = ref(false)   // playing state
+    const showMore = ref(false)    // hover state for "more"
+    const currentIndex = ref(-1)   // current song index
+    const audio = ref(null)        // Audio object
 
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const player = ref()
-const isPlaying = ref(false)
-const src = ref('')
-const showMore = ref(false)
-
-const musicFiles = ref([])      // holds the playlist
-const currentIndex = ref(0)     // current song index
-
-// Utility: Shuffle an array (Fisher-Yates shuffle)
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[array[i], array[j]] = [array[j], array[i]]
-  }
-  return array
-}
-
-// Pick a random song index
-function pickRandomIndex() {
-  return Math.floor(Math.random() * musicFiles.value.length)
-}
-
-const loadMusicFiles = async () => {
-  try {
-    const res = await fetch('/api/music')
-    if (!res.ok) throw new Error(`API error: ${res.status}`)
-
-    const json = await res.json()
-    musicFiles.value = shuffle(json.files || [])
-
-    console.log('Randomized playlist:', musicFiles.value)
-
-    if (musicFiles.value.length) {
-      currentIndex.value = 0
-      src.value = musicFiles.value[currentIndex.value]
-      initializePlayer()
+    // Fetch files from Supabase bucket
+    async function fetchFiles() {
+      const { data, error } = await supabase.storage.from(bucketName).list()
+      if (error) {
+        console.error('Error fetching files:', error)
+        return
+      }
+      // Filter to audio files (optional, assuming mp3 or similar)
+      files.value = data.filter(f => /\.(mp3|wav|ogg|m4a)$/i.test(f.name))
     }
-  } catch (error) {
-    console.error('Error fetching music files:', error)
-  }
+
+    // Shuffle helper
+    function shuffleArray(arr) {
+      let array = arr.slice()
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[array[i], array[j]] = [array[j], array[i]]
+      }
+      return array
+    }
+
+    // Play song at given index
+    async function playSong(index) {
+      if (!files.value.length) return
+      if (audio.value) {
+        audio.value.pause()
+        audio.value = null
+      }
+      currentIndex.value = index
+      const fileName = files.value[index].name
+      // Get public URL for file
+      const { data: urlData, error } = supabase.storage.from(bucketName).getPublicUrl(fileName)
+      if (error) {
+        console.error('Error getting file URL:', error)
+        return
+      }
+      audio.value = new Audio(urlData.publicUrl)
+      audio.value.play()
+      isPlaying.value = true
+
+      // When song ends, play next random song
+      audio.value.onended = () => {
+        playNextRandom()
+      }
+    }
+
+    // Play next random song different from current
+    function playNextRandom() {
+      if (!files.value.length) return
+      let nextIndex
+      do {
+        nextIndex = Math.floor(Math.random() * files.value.length)
+      } while (nextIndex === currentIndex.value && files.value.length > 1)
+      playSong(nextIndex)
+    }
+
+    // Play / pause toggle logic
+    function play() {
+  // Always play a new random song when play clicked
+  playNextRandom()
 }
 
-const initializePlayer = () => {
-  if (!src.value) return
 
-  player.value = new Audio(src.value)
-  player.value.preload = 'auto'
-  player.value.load()
+    function pause() {
+      if (audio.value) {
+        audio.value.pause()
+        isPlaying.value = false
+      }
+    }
 
-  player.value.addEventListener('play', () => {
-    isPlaying.value = true
-  })
-  player.value.addEventListener('pause', () => {
-    isPlaying.value = false
-  })
+    // On mounted, fetch files
+    onMounted(() => {
+      fetchFiles()
+    })
 
-  // Auto play next song when current ends
-  player.value.addEventListener('ended', () => {
-    playNext()
-  })
-
-  isPlaying.value = false
+    return {
+      files,
+      isPlaying,
+      showMore,
+      play,
+      pause,
+    }
+  },
 }
-
-function play() {
-  if (player.value) {
-    // When resuming after pause, pick random song
-    currentIndex.value = pickRandomIndex()
-    console.log(`Resuming with random song:`, musicFiles.value[currentIndex.value])
-
-    player.value.pause() // stop current audio
-    player.value.src = musicFiles.value[currentIndex.value]
-    player.value.load()
-    player.value.play()
-  }
-}
-
-function pause() {
-  if (player.value) {
-    player.value.pause()
-  }
-}
-
-function playNext() {
-  currentIndex.value = (currentIndex.value + 1) % musicFiles.value.length
-  console.log(`Playing next song:`, musicFiles.value[currentIndex.value])
-
-  if (player.value) {
-    player.value.pause()
-    player.value.src = musicFiles.value[currentIndex.value]
-    player.value.load()
-    player.value.play()
-  }
-}
-
-onMounted(() => {
-  loadMusicFiles()
-})
 </script>
 
-
-
+<template>
+  <section>
+    <div @mouseenter="showMore = true" @mouseleave="showMore = false">
+      <button v-if="!isPlaying" @click="play">I</button>
+      <button v-else @click="pause">o</button>
+      <NuxtLink to="/about" v-if="isPlaying && showMore">
+        <h1>more</h1>
+      </NuxtLink>
+    </div>
+  </section>
+</template>
 
 <style scoped>
-  section {
-    position: fixed;
-    bottom: 4px;
-    left: 4px;
-    z-index: 100;
-  }
-  
-  div {
-    display: flex;
-    gap: 6px;
+section {
+  position: fixed;
+  bottom: 4px;
+  left: 4px;
+}
 
-  }
-  
-  h1 {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 12px;
-    letter-spacing: -0.2px;
-    color: aliceblue;
-    background-color: black;
-    padding: 12px 4px 0px 4px;
-    border-radius: 4px;
-    font-weight: 100;
-    height: 100%;
-   
-    align-items: center;
-    line-height: 0px;
-    cursor: pointer;
-  }
-  
-  button {
-    all: unset;
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 40px;
-    font-weight: bold;
-    background-color: rgb(255, 0, 0);
-    box-shadow: 1px 1px 0px black;
-  }
+div {
+  display: flex;
+  gap: 6px;
+}
 
-  div:hover{
-    opacity: .9;
-  }
-  </style>
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  color: aliceblue;
+  background-color: black;
+  padding: 12px 4px 0px 4px;
+  border-radius: 4px;
+  font-weight: 100;
+
+  align-items: center;
+  line-height: 0px;
+  cursor: pointer;
+  height: 100%;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 1px 1px 0px black;
+}
+</style>

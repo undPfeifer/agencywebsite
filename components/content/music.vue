@@ -1,151 +1,103 @@
-<template>
-    <section>
-      <div @mouseenter="showMore = true" @mouseleave="showMore = false">
-        <button v-if="!isPlaying" @click="play">I</button>
-        <button v-else @click="pause">o</button>
-        <NuxtLink to="/about" v-if="isPlaying && showMore">
-          <h1>more</h1>
-        </NuxtLink>
-      </div>
-    </section>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted, watch } from 'vue'
-  
-  const player = ref()
-  const isPlaying = ref(false)
-  const src = ref('')
-  const showMore = ref(false)
-  
-  // Get current route to determine which markdown file to load
-  const route = useRoute()
-  
-  // Function to load content and update src
-  const loadContent = async () => {
-    const currentSlug = route.params.slug || route.path.replace('/', '') || 'index'
-    
-    // DEBUG: Log what we're looking for
-    console.log('Current route:', route.path)
-    console.log('Looking for slug:', currentSlug)
-    
-    let content = null
-    try {
-      // Try different query approaches
-      console.log('Trying queryContent with articles directory...')
-      const result1 = await queryContent('articles', currentSlug).findOne()
-      console.log('Articles query result:', result1)
-      
-      console.log('Trying direct path query...')
-      const result2 = await queryContent().where({ _path: `/articles/${currentSlug}` }).findOne()
-      console.log('Direct path query result:', result2)
-      
-      console.log('Trying slug-based query...')
-      const result3 = await queryContent().where({ slug: currentSlug }).findOne()
-      console.log('Slug-based query result:', result3)
-      
-      // Use whichever one works
-      content = result1 || result2 || result3
-      console.log('Final content:', content)
-      console.log('Song from content:', content?.song)
-    } catch (error) {
-      console.log(`Error querying content:`, error)
-    }
-    
-    const newSrc = content?.song || '/25.06.16_elyssian.mp3'
-    console.log('Final src:', newSrc)
-    
-    // If source changed, stop current player and create new one
-    if (src.value !== newSrc) {
-      if (player.value) {
-        player.value.pause()
-        player.value.src = ''
-      }
-      
-      src.value = newSrc
-      initializePlayer()
-    }
+<script setup>
+import { ref, onMounted, watch } from 'vue'
+import { createClient } from '@supabase/supabase-js'
+
+// Replace with your actual Supabase credentials
+
+const supabaseUrl = 'https://kifdamniffzvjqrioqic.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtpZmRhbW5pZmZ6dmpxcmlvcWljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM4NTQ5NTgsImV4cCI6MjA0OTQzMDk1OH0.v4_-ZDTWMgFpClLf7aEXO3KpqDfTjNFWuoFT4fijQIA';
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
+const player = ref()
+const isPlaying = ref(false)
+const src = ref('')
+const showMore = ref(false)
+
+const route = useRoute()
+
+// Get public URL from Supabase bucket root
+async function getSongUrlFromSupabase(songFileName) {
+  // songFileName example: 'mytrack.mp3' - at root of the bucket
+  const { data, error } = supabase.storage
+    .from('undpfeifersound')
+    .getPublicUrl(songFileName)
+
+  if (error) {
+    console.error('Supabase storage error:', error)
+    return null
   }
-  
-  // Initialize the audio player
-  const initializePlayer = () => {
-    if (!src.value) return
-    
-    player.value = new Audio(src.value)
-    player.value.preload = 'auto'
-    player.value.loop = true
-    player.value.load()
-    
-    fetch(src.value)
-    
-    // Keep isPlaying state synced with actual audio
-    player.value.addEventListener('play', () => {
-      isPlaying.value = true
-    })
-    player.value.addEventListener('pause', () => {
-      isPlaying.value = false
-    })
-    
-    // Reset playing state when new audio loads
-    isPlaying.value = false
+
+  return data.publicUrl
+}
+
+const loadContent = async () => {
+  const currentSlug = route.params.slug || route.path.replace('/', '') || 'index'
+
+  let content = null
+  try {
+    const result1 = await queryContent('articles', currentSlug).findOne()
+    const result2 = await queryContent().where({ _path: `/articles/${currentSlug}` }).findOne()
+    const result3 = await queryContent().where({ slug: currentSlug }).findOne()
+
+    content = result1 || result2 || result3
+
+  } catch (error) {
+    console.log('Error querying content:', error)
   }
-  
-  // Watch for route changes
-  watch(() => route.path, () => {
-    loadContent()
-  })
-  
-  onMounted(() => {
-    loadContent()
-  })
-  
-  function play() {
-    if (player.value) {
-      player.value.play()
-    }
-  }
-  
-  function pause() {
+
+  // song property should hold just the filename, e.g., 'track.mp3'
+  const songFileName = content?.song || '25.06.16_elyssian.mp3'
+
+  const publicUrl = await getSongUrlFromSupabase(songFileName)
+
+  if (src.value !== publicUrl && publicUrl) {
     if (player.value) {
       player.value.pause()
+      player.value.src = ''
     }
+    src.value = publicUrl
+    initializePlayer()
   }
-  </script>
-  
-  <style scoped>
-  section {
-    position: fixed;
-    bottom: 4px;
-    left: 4px;
+}
+
+const initializePlayer = () => {
+  if (!src.value) return
+
+  player.value = new Audio(src.value)
+  player.value.preload = 'auto'
+  player.value.loop = true
+  player.value.load()
+
+  fetch(src.value)
+
+  player.value.addEventListener('play', () => {
+    isPlaying.value = true
+  })
+  player.value.addEventListener('pause', () => {
+    isPlaying.value = false
+  })
+
+  isPlaying.value = false
+}
+
+watch(() => route.path, () => {
+  loadContent()
+})
+
+onMounted(() => {
+  loadContent()
+})
+
+function play() {
+  if (player.value) {
+    player.value.play()
   }
-  
-  div {
-    display: flex;
-    gap: 6px;
+}
+
+function pause() {
+  if (player.value) {
+    player.value.pause()
   }
-  
-  h1 {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 12px;
-    letter-spacing: -0.2px;
-    color: aliceblue;
-    background-color: black;
-    padding: 12px 4px 0px 4px;
-    border-radius: 4px;
-    font-weight: 100;
-   
-    align-items: center;
-    line-height: 0px;
-    cursor: pointer;
-  }
-  
-  button {
-    all: unset;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-weight: bold;
-    background-color: white;
-    box-shadow: 1px 1px 0px black;
-  }
-  </style>
+}
+</script>
