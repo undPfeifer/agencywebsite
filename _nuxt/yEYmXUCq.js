@@ -1,0 +1,1 @@
+import{_ as t,c as o,o as n,a as s,r as a}from"./Dg7QLVXh.js";const r={},d={class:"bold"};function l(e,c){return n(),o("div",null,[s("p",d,[a(e.$slots,"leadleft",{},void 0,!0)]),s("p",null,[a(e.$slots,"leadright",{},void 0,!0)])])}const f=t(r,[["render",l],["__scopeId","data-v-23fb27a9"]]);export{f as default};

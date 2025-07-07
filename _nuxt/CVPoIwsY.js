@@ -1,0 +1,1 @@
+import{_ as r,c as n,o,r as s}from"./Dg7QLVXh.js";const a=["href"],c={__name:"contentbtn",props:{href:{type:String,required:!0}},setup(e){return(t,_)=>(o(),n("a",{href:e.href,target:"_blank",rel:"noopener noreferrer",class:"btn"},[s(t.$slots,"default",{},void 0,!0)],8,a))}},l=r(c,[["__scopeId","data-v-99519c15"]]);export{l as default};
