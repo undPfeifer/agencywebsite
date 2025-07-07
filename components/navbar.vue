@@ -6,9 +6,9 @@
   > 
       <a href="/"> <logo /></a>
       <div class="nav--text_container">
-          <a href="/">home</a>
-          <a href="/team">about</a> 
-          <a>kontakt</a>
+        <NuxtLink to="/" class="nav-link">home</NuxtLink>
+        <NuxtLink to="/about" class="nav-link">about</NuxtLink>
+        <a href="mailto:dimitri.pfeifer@gmx.net">kontakt</a>
       </div>
   </section>
 </template>
@@ -71,6 +71,12 @@ onUnmounted(() => {
 <style scoped>
 * {
   margin: 0px;
+}
+.navlink {
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 a {

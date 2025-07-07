@@ -9,7 +9,7 @@ export default {
     const supabaseUrl = 'https://kifdamniffzvjqrioqic.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtpZmRhbW5pZmZ6dmpxcmlvcWljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM4NTQ5NTgsImV4cCI6MjA0OTQzMDk1OH0.v4_-ZDTWMgFpClLf7aEXO3KpqDfTjNFWuoFT4fijQIA';
                 // replace this
-const bucketName = 'music' 
+const bucketName = 'undpfeifermusic' 
 
     const supabase = createClient(supabaseUrl, supabaseKey)
 
