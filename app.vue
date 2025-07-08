@@ -11,6 +11,7 @@
   <musicplayer />
 
   <mobile-nav />
+  <impressum />
   
 </template>
 

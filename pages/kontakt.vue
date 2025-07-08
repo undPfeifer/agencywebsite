@@ -1,10 +1,19 @@
 <template>
     <section>
         <img src="/img/kontakt-1.webp" alt="">
+
+        <h1>Für unverbindliche Hallos und absolute Notfälle :)</h1>
+        <img class="hand" src="https://cdn.prod.website-files.com/662fc30c6f0e360e128c9312/684c231d55101f050420c81d_Unkreativist_Hand-p-500.png" alt="">
+
+
+        <a href="https://wa.me/0762456090" target="_blank">  <img class="icon" src="/assets/whatsapp-glyph-black-logo-svgrepo-com.svg" alt=""> </a> 
       <div>
         <button @click="handleClick">{{ buttonText }}</button>
         <div class="hide-container" ref="appender"></div>
       </div>
+      <p>        /<br> :)-0= ; <br>   /
+
+        </p>
     </section>
   </template>
   
@@ -51,6 +60,17 @@
   </script>
   
   <style scoped> 
+.icon{
+    width: 10vw;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.icon:hover {
+    transform: scale(1.1);
+
+}
+
   button {
     all: unset;
     cursor: pointer;
@@ -73,6 +93,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-bottom: 30px;
   }
   
   div {
@@ -80,11 +101,27 @@
     flex-direction: column;
     gap: 12px;
   }
+
+
+  @media (min-width:1000px) {
+    .icon {
+        width: 120px;
+    }
+  }
   </style>
 
   <style scoped>
     img {
         max-height: 70vh;
+    }
+
+    .hand {
+        transform: scaleX(-1)  rotate(40deg);
+        margin-bottom: -100px;
+        margin-left: 20vw; 
+        height: 200px;
+        width: 300px;
+        object-fit: scale-down;
     }
 </style>
   
