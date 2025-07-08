@@ -11,6 +11,8 @@ thumbnail: './img/fladapla/5-iPhone.webp'
 slug: 'flachdach'
 logo-nav: 'flachdach'
 song: './25.06.28_father love-01-01.mp3'
+block: false
+
 ---
 
 

@@ -11,6 +11,8 @@ thumbnail: './img/vivi/dogville/stueckzeitung5.jpg'
 slug: 'dogville'
 logo-nav: 'vivi'
 song: './25.06.28_father love-01-01.mp3'
+block: false
+
 ---
 
 

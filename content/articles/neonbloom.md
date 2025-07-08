@@ -7,23 +7,23 @@ description: "Für neonbLoom haben wir eine komplettes Redesign für ihren NEONS
 date: 2025-06-08
 draft: false
 tags: ['branding' , 'webdesign' , 'logo']
-thumbnail: '/img/neon/Neonshop-01-MB.jpg'
+thumbnail: 'img/neon/Neonshop-01-MB.jpg'
 slug: 'neonbloom'
 logo-nav: 'neonbloom'
-song: '/25.06.16_elyssian.mp3'
+song: '25.06.16_elyssian.mp3'
+block: false
 ---
 
 
 
 
 
-::blogImg{src="/img/neon/Neonshop-01-MB.jpg"}
+::blogImg{src="img/neon/Neonshop-01-MB.jpg"}
+::
+::blogImg{src="img/neon/Neonshop-02-MB.jpg"}
 ::
 
-::blogImg{src="/img/neon/Neonshop-02-MB.jpg"}
-::
-
-::blogImg{src="/img/neon/Neonshop_logo.jpg"}
+::blogImg{src="img/neon/Neonshop_logo.jpg"}
 ::
 
 ::lead

@@ -1,19 +1,18 @@
 <template>
-    <main>
-      <landingHeader />
-      <ContentList path="/" v-slot="{ list }">
-       
+  <main>
+    <landingHeader />
+    <ContentList path="/" v-slot="{ list }">
+     
 
-        <div class="project--card_container">
+      <div class="project--card_container">
 
-          <div v-for="article in list" :key="article._path">
-            <NuxtLink :to="`/${article.slug}`">
-              <!-- Your existing card content -->
-            </NuxtLink>
-          </div>
+        <div v-for="article in list" :key="article._path">
+          <NuxtLink :to="`/${article.slug}`">
+            <!-- Your existing card content -->
+          </NuxtLink>
         </div>
-      </ContentList>
-    </main>
-  </template>
-
+      </div>
+    </ContentList>
+  </main>
+</template>
 

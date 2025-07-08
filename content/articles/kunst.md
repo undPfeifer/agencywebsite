@@ -11,6 +11,7 @@ thumbnail: 'img/kunst/cover.jpg'
 slug: 'kunst'
 logo-nav: 'kunst'
 song: '25.06.16_elyssian.mp3'
+block: false
 ---
 
 

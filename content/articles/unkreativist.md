@@ -11,6 +11,7 @@ thumbnail: 'img/unkreativist/unkr-web-about.gif'
 slug: 'unkreativist'
 logo-nav: 'unkreativist'
 song: '25.06.16_elyssian.mp3'
+block: false
 ---
 
 

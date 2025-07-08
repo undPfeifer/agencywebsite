@@ -1,7 +1,7 @@
 <template>
     <section>
+        <img src="/img/kontakt-1.webp" alt="">
       <div>
-        <h3>Email us at</h3>
         <button @click="handleClick">{{ buttonText }}</button>
         <div class="hide-container" ref="appender"></div>
       </div>
@@ -13,7 +13,7 @@
     data() {
       return {
         emailShown: false,   // track if email has been shown
-        buttonText: 'Show mail' // initial button text
+        buttonText: 'Email' // initial button text
       };
     },
     methods: {
@@ -60,10 +60,12 @@
     padding: 8px 16px;
     width: fit-content;
     transition: background-color 0.3s ease, opacity 0.3s ease;
+    font-size: 6vw;
   }
   
   button:hover {
-    opacity: 80%;
+    opacity: 100%;
+    background-color: blue;
   }
   
   section {
@@ -79,4 +81,10 @@
     gap: 12px;
   }
   </style>
+
+  <style scoped>
+    img {
+        max-height: 70vh;
+    }
+</style>
   

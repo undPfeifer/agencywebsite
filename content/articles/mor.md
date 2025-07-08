@@ -7,10 +7,11 @@ description: "Für die neu gegründete mobile Sagerei MOR haben wir das komplett
 date: 2025-06-08
 draft: false
 tags: ['branding' , 'print' , 'grafik' , 'logo' , 'website']
-thumbnail: '/img/mor/MOBILE_WEB_MOCKUP.jpg'
+thumbnail: 'img/mor/MOBILE_WEB_MOCKUP.jpg'
 slug: 'mor'
 logo-nav: 'mor'
-song: '/25.06.16_elyssian.mp3'
+song: '25.06.16_elyssian.mp3'
+block: false
 ---
 
 
@@ -18,7 +19,7 @@ song: '/25.06.16_elyssian.mp3'
 ::heading
 Logo
 ::
-::blogImg{src="/img/mor/MOR-logo-stoff.jpg"}
+::blogImg{src="img/mor/MOR-logo-stoff.jpg"}
 ::
 
 ::lead 
@@ -33,7 +34,7 @@ Das M soll die Charakteristik des Handwerks wiederspiegeln. Stark und beständig
 Visitenkarte
 ::
 
-::blogImg{src="/img/mor/Mockup_Visitenkarte_4.webp"}
+::blogImg{src="img/mor/Mockup_Visitenkarte_4.webp"}
 ::
 
 ::lead 
@@ -50,7 +51,7 @@ Website
 <contentbtn href="https://www.mobili-sagerei.ch/">live-website aufrufen</contentbtn>
 
 
-::blogImg{src="/img/mor/MOBILE_WEB_MOCKUP.jpg"}
+::blogImg{src="img/mor/MOBILE_WEB_MOCKUP.jpg"}
 ::
 
 
