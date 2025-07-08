@@ -20,7 +20,7 @@
     }
 
     p {
-        font-size: 22px !important;
+        font-size: 20px !important;
         line-height: 1.2;
         font-weight: 100;
     }

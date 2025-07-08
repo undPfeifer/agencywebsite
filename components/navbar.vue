@@ -7,9 +7,11 @@
       <a href="/"> <logo /></a>
       <div class="nav--text_container">
         <NuxtLink to="/" class="nav-link">home</NuxtLink>
-        <NuxtLink to="/about" class="nav-link">about</NuxtLink>
-        <a href="mailto:dimitri.pfeifer@gmx.net">kontakt</a>
-      </div>
+        <NuxtLink to="/team" class="nav-link">team</NuxtLink>
+        <NuxtLink to="/kontakt" class="nav-link">kontakt</NuxtLink>
+
+  
+     </div>
   </section>
 </template>
 

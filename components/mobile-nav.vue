@@ -1,16 +1,39 @@
 <template>
     <nav>
         <div> 
-            <a href="/">home</a>
-            <a href="/team">team</a>
-            <a href="">top</a>
+            <NuxtLink to="/" class="nav-link">home</NuxtLink>
+            <NuxtLink to="/team" class="nav-link">team</NuxtLink>
+            <NuxtLink to="/kontakt" class="nav-link">kontakt</NuxtLink>
+
+            <a @click="scrollToTop" class="toparrow"> 
+                <img src="/assets/scroll-to-top.svg" alt="" class="toparrow">
+            </a>
+            
         </div>
 
     </nav>
 </template>
 
+<script>
+export default {
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+</script>
+
 <style scoped>
-nav{
+* {
+    font-size: clamp(2vw, 12px, 16px);
+    color: rgb(139, 139, 139);
+}
+
+nav {
     position: fixed;
     bottom: 0px;
 
@@ -18,46 +41,65 @@ nav{
 
     width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 0px;
 
     align-items: center;
     justify-content: center;
 
     padding: 8px 20px 8px 20px;
 
-
+    overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
-a{
+a {
     all: unset;
 
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 80px;
 
     cursor: pointer;
-    width:100%;
+    width: 100%;
     padding: 12px 20px;
-    background-color: rgb(255, 255, 255);
-    /* box-shadow: inset 1px 10px 10px rgba(255, 255, 255, 0.708);
-*/
-    box-shadow: 2px 2px 0px #e4e4e4, 
-    inset 1px 1px 0px rgb(89, 89, 89);
+    background-color: rgb(37, 37, 37);
     display: flex;
     justify-content: center;
     align-items: center;
 
+    height: 20px;
+    flex: 0 0 auto; /* don't shrink scroll-to-top button */
+}
+
+a:hover {
+    color: white;
+    background-color: rgb(52, 52, 52);
+}
+
+.nav-link {
+    flex: 1 1 0; /* allow links to shrink evenly */
+    min-width: 0; /* prevent min-content overflow */
+    text-align: center;
 }
 
 div {
     display: flex;
-    gap: 6px;    
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 14px;
+    justify-content: space-between;
+    gap: 8px;
+    background-color: rgb(0, 0, 0);
+    padding: 8px;
+    border-radius: 40px;
+    width: 100%;
+    height: 60px;
+    overflow: hidden; /* prevent internal overflow */
 }
 
-@media (min-width:700px) {
-    nav {display: none;}
+.toparrow{
+    width: 20px !important;
+}
+
+@media (min-width: 700px) {
+    nav {
+        display: none;
+    }
 }
 
 

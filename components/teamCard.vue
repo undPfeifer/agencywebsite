@@ -12,12 +12,18 @@
                 </h3>
                 
             </div>
+            <NuxtLink to="/kontakt" class="nav-link"> 
             <div class="hide--kontakt-ansehen">
                         <h4 class="projekt--ansehen">kontakt aufnehmen</h4>
-                        <img  src="/assets/Arrow.svg" alt="" class="arrow">
+                        
+                            <img  src="/assets/Arrow.svg" alt="" class="arrow"> 
+                        
+                       
+
+                        
 
             </div>
-
+        </NuxtLink>
 
     </div>
 

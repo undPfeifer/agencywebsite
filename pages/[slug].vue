@@ -20,7 +20,7 @@
                     <div class="header--text">
 
                         <h1> {{ doc.title }} </h1>
-                        <h3> {{ doc.client }}</h3>
+                        <h3> <span class="times">for </span>{{ doc.client }}</h3>
                     </div>
                     <p class="header--description"> {{ doc.description }}</p>
                 </div>
@@ -43,6 +43,12 @@
 </template>
 
 <style scoped>
+
+.times{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+}
 
 
 

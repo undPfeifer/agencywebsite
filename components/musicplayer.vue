@@ -9,7 +9,7 @@ export default {
     const supabaseUrl = 'https://kifdamniffzvjqrioqic.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtpZmRhbW5pZmZ6dmpxcmlvcWljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM4NTQ5NTgsImV4cCI6MjA0OTQzMDk1OH0.v4_-ZDTWMgFpClLf7aEXO3KpqDfTjNFWuoFT4fijQIA';
                 // replace this
-const bucketName = 'undpfeifermusic' 
+const bucketName = 'music' 
 
     const supabase = createClient(supabaseUrl, supabaseKey)
 
@@ -110,9 +110,14 @@ const bucketName = 'undpfeifermusic'
     <div @mouseenter="showMore = true" @mouseleave="showMore = false">
       <button v-if="!isPlaying" @click="play">I</button>
       <button v-else @click="pause">o</button>
-      <NuxtLink to="/about" v-if="isPlaying && showMore">
+      <a
+  :href="'https://undpfeifer.github.io/dedimispotify/'"
+  target="_blank"
+  rel="noopener"
+  v-if="isPlaying && showMore"
+>
         <h1>more</h1>
-      </NuxtLink>
+      </a>
     </div>
   </section>
 </template>

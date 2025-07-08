@@ -29,13 +29,7 @@
         <!-- ----x----x----x----x  Sven ----x----x----x----x----x----x -->
             
     
-            <teamCard> 
-                <template #image>
-                    <img src="/team/sven1.jpeg" alt="sven sis bild isch verlore gange" class="img"/>
-                </template>
-                <template #name> Sven Langone</template>
-                <template #title> Multimediaproduzent EFZ, Motion Designer & Videoguru</template>
-            </teamCard>
+          
     
     
         </section>
@@ -52,7 +46,7 @@
         }
     
         .pseudoBody {
-            padding: 10px 0px 0px 20px;
+            padding: 10px 0px 40px 20px;
         }
     
         section{padding: 0px 0px;}

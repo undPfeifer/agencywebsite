@@ -99,6 +99,7 @@ p{
     margin: 0px;
     width: 200px;
     object-fit: scale-down;
+    height: auto;
 }
 
 .project--card_container{
