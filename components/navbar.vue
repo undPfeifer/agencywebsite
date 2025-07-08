@@ -4,7 +4,8 @@
       ref="navbar"
       :class="{ 'navbar--scrolled': isScrolledDown }"
   > 
-      <a href="/"> <logo /></a>
+  <NuxtLink to="/" ><logo /></NuxtLink>
+
       <div class="nav--text_container">
         <NuxtLink to="/" class="nav-link">home</NuxtLink>
         <NuxtLink to="/team" class="nav-link">team</NuxtLink>
