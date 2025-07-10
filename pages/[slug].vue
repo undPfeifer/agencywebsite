@@ -170,8 +170,3 @@ h3 {
 
 </style>
 
-<style> 
-
-</style>
-
-

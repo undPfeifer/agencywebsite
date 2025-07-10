@@ -3,10 +3,15 @@
 </script>
 
 <template>
+  <client-only>
+
   <div>
     <p class="bold"> <slot  name="leadleft"> </slot> </p>
     <p> <slot  name= "leadright"> </slot> </p>
   </div>
+
+</client-only>
+
 </template>
 
 
@@ -28,5 +33,19 @@
     .bold{
         font-weight: bold;
           font-size: 20px !important;
+    }
+
+    @media (max-width:700px) {
+      div {
+        grid-template-columns: 1fr;
+        padding: 0px;
+      }
+
+      p {
+        font-size: 16px !important;
+      }
+      .bold {
+        font-size: 16px !important;
+      }
     }
 </style>
