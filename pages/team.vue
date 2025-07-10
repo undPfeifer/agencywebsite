@@ -4,7 +4,9 @@
     
         <Strichma />
         <section class="card--list_wrapper"> 
-    
+            
+
+
             <teamCard>
     
         <!-- ----x----x----x----x  DIMI ----x----x----x----x----x----x -->
@@ -13,21 +15,27 @@
                     <img src="/team/dimi1.jpeg" alt="" class="img dimi"/>
                 </template>
                 <template #name> Dimitri Pfeifer </template>
-                <template #title> Inhaber, Grafiker EFZ & Programierer </template>
+                <template #title> Inhaber, Grafiker EFZ & Programmierer </template>
             </teamCard> 
     
-        <!-- ----x----x----x----x  Marco ----x----x----x----x----x----x -->
+        <!-- ----x----x----x----x  VIVI ----x----x----x----x----x----x -->
     
             <teamCard>
+                <template #image>
+                    <img src="/team/vivi2.webp" alt="" class="img"/>
+                </template>
+                <template #name> Vivi Ammann </template>
+                <template #title> Grafikerin EFZ, Texterin </template>
+            </teamCard> 
+    
+        <!-- ----x----x----x----x  marco ----x----x----x----x----x----x -->
+        <teamCard>
                 <template #image>
                     <img src="/team/Marco-590x590.jpg" alt="" class="img"/>
                 </template>
                 <template #name> Marco Bosshard </template>
                 <template #title> Office365ler, Admin & Finanzen </template>
             </teamCard> 
-    
-        <!-- ----x----x----x----x  Sven ----x----x----x----x----x----x -->
-            
     
           
     

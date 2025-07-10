@@ -1,7 +1,7 @@
 ---
 eyebrow: 'Broschüre'
 title: "Gaswerk Broschüre"
-client: "Gaswerk Kletterzentrum"
+client: "Gaswerk Kletterzentrum Schlieren"
 creator: "Dimitri Pfeifer"
 description: "Broschüre für das Gaswerk Kletterzentrum"
 date: 2023-10-06
@@ -24,12 +24,6 @@ block: false
 
 
 
-::lead
-#leadleft
-Die Glarner Kantonalbank ist zurück im Fernsehen. Zense hat dabei mit einer Prise Fantasie eine skurrile aber doch vertraute Welt unweit der Glarner Alpen erschaffen.
-#leadright
-In diesem Projekt hatte ich das Privileg, eine Vielzahl von Aufgaben zu übernehmen, angefangen von der Setfotografie bis hin zum Schnitt und den TV-Exporten.
-::
 
 
 ::blogImg{src="img/gaswerk/Mockup_Brochure_8-9.webp"}
@@ -41,8 +35,7 @@ In diesem Projekt hatte ich das Privileg, eine Vielzahl von Aufgaben zu überneh
 
 
 
-::contentbtn 
+::ContentBtn{href="/kontakt"}
 kontakt
 ::
-
 

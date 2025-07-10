@@ -1,9 +1,9 @@
 ---
 eyebrow: 'editorial'
 title: "Jahrbuch 2425"
-client: "Illustration & Editorial"
+client: "Schule Allmend Meilen"
 creator: "Dimitri Pfeifer"
-description: "Wir durften diese Jahr wieder das Jahrbuch der Schule Allmend Meilen umsetzen."
+description: "Wir durften dieses Jahr wieder das Jahrbuch der Schule Allmend Meilen umsetzen."
 date: 2025-06-08
 draft: false
 tags: ['editorial' , 'print' , 'grafik']
@@ -26,13 +26,13 @@ block: false
 #leadleft
 Das diesjährige Thema war "Gesunheit"
 #leadright
-Um die Lebendigkeit der Kinder zu unterstreichen haben Wir uns für knallbunte farben entschieden. Damit jede Doppelseite persönlich wirkt haben Wir für jede Seite eine eigene Farbvariation gestaltet.
+Um die Lebendigkeit der Kinder zu unterstreichen haben wir uns für knallbunte Farben entschieden. Damit jede Doppelseite persönlich wirkt, ist jede Seite mit einer eigenen Farbvariation gestaltet.
 ::
 
 ::blogImg{src="img/jahrbuch/s1-2.png"}
 ::
 
-::contentbtn 
+::ContentBtn{href="/kontakt"}
 kontakt
 ::
 

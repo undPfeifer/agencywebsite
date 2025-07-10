@@ -3,7 +3,7 @@ eyebrow: 'editorial'
 title: "dogville"
 client: "Illustration & Editorial"
 creator: "Viviane Ammann"
-description: "Stückzeitung für die Theateraufführung von Lars von Triers «Dogville»."
+description: "Fiktive Stückzeitung für die Theateraufführung von Lars von Triers «Dogville»."
 date: 2023-10-06
 draft: false
 tags: [ 'editorial' , 'print']
@@ -27,16 +27,18 @@ block: false
 
 ::lead
 #leadleft
-Die Glarner Kantonalbank ist zurück im Fernsehen. Zense hat dabei mit einer Prise Fantasie eine skurrile aber doch vertraute Welt unweit der Glarner Alpen erschaffen.
+Auftrag: Stückzeitung für die Theateraufführung von Lars von Triers «Dogville».
 #leadright
-In diesem Projekt hatte ich das Privileg, eine Vielzahl von Aufgaben zu übernehmen, angefangen von der Setfotografie bis hin zum Schnitt und den TV-Exporten.
+Idee: Dogville wurde in der stets gleichbleibenden, reduziert flächigen, geometrischen Bühnenkonstruktion aufgeführt, die Gestaltung der Stückzeitung soll den Theaterbesuchern diesen Eindruck vermitteln. Genau wie das Bühnenbild den Schauspielern, lässt das Gesamtdesign der Typografie den Platz und den Fokus den sie braucht, um aussagekräftig zu sein.
+
 ::
 
 
 
 
-::contentbtn 
+::ContentBtn{href="/kontakt"}
 kontakt
 ::
+
 
 

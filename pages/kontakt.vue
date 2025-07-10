@@ -2,7 +2,7 @@
     <section>
         <img src="/img/kontakt-1.webp" alt="">
 
-        <h1>Für unverbindliche Hallos und absolute Notfälle :)</h1>
+        <h1>Für unverbindliche Hallos oder absolute Notfälle :)</h1>
         <img class="hand" src="https://cdn.prod.website-files.com/662fc30c6f0e360e128c9312/684c231d55101f050420c81d_Unkreativist_Hand-p-500.png" alt="">
 
 
@@ -106,6 +106,12 @@
   @media (min-width:1000px) {
     .icon {
         width: 120px;
+    }
+  }
+
+  @media (max-width:700px) {
+    h1 {
+        font-size: 40px;
     }
   }
   </style>

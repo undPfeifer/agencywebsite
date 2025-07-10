@@ -24,7 +24,7 @@ Logo
 
 ::lead 
 #leadleft 
-Die Bildmarke des ist inspiriert von der Form des Sägeblatts das MOR mit ihrer Maschine benutzt.
+Die Bildmarke des Logos ist inspiriert von der Form des Sägeblatts das MOR mit ihrer Maschine benutzt.
 #leadright 
 Das M soll die Charakteristik des Handwerks wiederspiegeln. Stark und beständig, mit scharfen sauberen Kanten wie sie die Säge macht. Die simple Formsprache ermöglicht es die Bildmarke M als Gestaltungselement bei diversen Werbemitteln zu verwenden.
 ::
@@ -37,24 +37,39 @@ Visitenkarte
 ::blogImg{src="img/mor/Mockup_Visitenkarte_4.webp"}
 ::
 
-::lead 
-#leadleft 
-Webdesign und Umsetzung
-#leadright 
-Die Website haben wir .....gestaltet und programmiert.
-::
 
 ::heading
 Website
 ::
 
-<contentbtn href="https://www.mobili-sagerei.ch/">live-website aufrufen</contentbtn>
+::lead 
+#leadleft 
+Die Website haben wir von grundauf gestaltet und programmiert.
+#leadright 
+Besonderen Fokus haben wir darauf gelegt sie für Suchmaschinen zu optimieren. 🚀
+Seit nun beinahe zwei Jahren ist MOR in Google an erster Stelle wenn man Mobile Sägerei sucht.
+::
+
+
+
+::lead 
+#leadleft 
+ChatGpt 
+#leadright 
+Wir haben die Website mittlerweile auch so strukturiert, dass gängige KI-Modelle gut auf sie zugreifen können. 
+Das Resultat: ChatGpt empfielt MOR an erster Stelle! 
+Testen Sie es selbst-> https://chatgpt.com/share/686d8abf-ba50-8011-bd2e-7f1938c1fb61
+::
+
+::blogImg{src="img/mor/gpt-1.webp"}
+::
 
 
 ::blogImg{src="img/mor/MOBILE_WEB_MOCKUP.jpg"}
 ::
 
 
+<contentbtn href="https://www.mobili-sagerei.ch/">live-website aufrufen</contentbtn>
 
 
 

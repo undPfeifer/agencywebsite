@@ -31,18 +31,10 @@ block: false
 
 
 
-::lead
-#leadleft
-Die Glarner Kantonalbank ist zurück im Fernsehen. Zense hat dabei mit einer Prise Fantasie eine skurrile aber doch vertraute Welt unweit der Glarner Alpen erschaffen.
-#leadright
-In diesem Projekt hatte ich das Privileg, eine Vielzahl von Aufgaben zu übernehmen, angefangen von der Setfotografie bis hin zum Schnitt und den TV-Exporten.
-::
 
-
-
-
-::contentbtn 
+::ContentBtn{href="/kontakt"}
 kontakt
 ::
+
 
 

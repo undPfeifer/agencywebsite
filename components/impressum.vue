@@ -8,7 +8,7 @@
 
         <NuxtLink href="/kontakt"> kontakt </NuxtLink>
 
-
+        <NuxtLink>Rechtliches</NuxtLink>
 
     </section>
 </template>
