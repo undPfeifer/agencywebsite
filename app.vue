@@ -1,6 +1,18 @@
 <script setup lang="ts">
   import { Analytics } from '@vercel/analytics/nuxt'
   import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+
+
+  useSeoMeta({
+  title: 'studio&pfeifer',
+  ogTitle: '&pfeifer Grafik & Webdesign',
+  description: 'Ihr Partner zur Umsetzung visueller Kommunikationslösungen. ',
+  ogDescription: 'Ihr Partner zur Umsetzung visueller Kommunikationslösungen. ',
+  ogImage: 'https://www.undpfeifer.ch/agencywebsite/img/kunst/cover.jpg',
+  twitterCard: 'summary_large_image',
+})
+
+
 </script>
 
 <template>

@@ -36,8 +36,10 @@ block: false
 
 
 
-::contentbtn 
+::ContentBtn{href="/kontakt"}
 kontakt
 ::
+
+
 
 

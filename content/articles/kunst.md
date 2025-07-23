@@ -85,8 +85,10 @@ Fotografie
 ::blogImg{src="/img/jahrbuch/s1-2.png"}
 ::
 
-::contentbtn 
+::ContentBtn{href="/kontakt"}
 kontakt
 ::
+
+
 
 

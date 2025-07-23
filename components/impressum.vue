@@ -4,7 +4,7 @@
         <div>
             <p>&pfeifer</p>
         </div>
-        <p>Badenerstrasse 361 | 8003 Zürich</p>
+        <p>Badenerstrasse | 8003 Zürich</p>
 
         <NuxtLink href="/kontakt"> kontakt </NuxtLink>
 
