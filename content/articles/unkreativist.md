@@ -6,7 +6,7 @@ creator: "Dimitri Pfeifer & Sven Langone"
 description: "Webdesign und Visitenkarten für die Animationsagentur Unkreativist"
 date: 2025-06-08
 draft: false
-tags: ['branding' , 'website' , 'grafik' , 'logo' ]
+tags: ['branding' , 'Web' , 'grafik' , 'logo' ]
 thumbnail: 'img/unkreativist/unkr-web-about.gif'
 slug: 'unkreativist'
 logo-nav: 'unkreativist'

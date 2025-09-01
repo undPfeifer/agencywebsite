@@ -8,7 +8,6 @@
 
         <div v-for="article in list" :key="article._path">
           <NuxtLink :to="`/${article.slug}`">
-            <!-- Your existing card content -->
           </NuxtLink>
         </div>
       </div>

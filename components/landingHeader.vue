@@ -2,21 +2,27 @@
     <main>
       <ContentList path="/" v-slot="{ list }">
         <div class="project--card_container">
-            <div v-for="article in list" :key="article._path">
-                <NuxtLink :to="`/${article.slug}`">
-                    <div class="projectCard"> 
-                        <img :src="article.thumbnail">
-                        <div class="tag--container">
-                            <p v-for="tag in article.tags" class="tag"> {{ tag }}</p>
-                        </div> 
-                        <h2> {{ article.title }} </h2>
-                        <div class="hide--projekt-ansehen">
-                            <img src="/assets/Arrow.svg" alt="" class="arrow">
-                            <p class="projekt--ansehen">projekt ansehen</p>
-                        </div>
-                    </div>
-                </NuxtLink>
-            </div>
+            <div v-for="article in [...list].sort((a, b) => {
+  const hasWebA = a.tags.includes('Web') ? 0 : 1
+  const hasWebB = b.tags.includes('Web') ? 0 : 1
+  return hasWebA - hasWebB
+})" 
+:key="article._path">
+  <NuxtLink :to="`/${article.slug}`">
+    <div class="projectCard"> 
+      <img :src="article.thumbnail">
+      <div class="tag--container">
+        <p v-for="tag in article.tags" class="tag">{{ tag }}</p>
+      </div> 
+      <h2>{{ article.title }}</h2>
+      <div class="hide--projekt-ansehen">
+        <img src="/assets/Arrow.svg" alt="" class="arrow">
+        <p class="projekt--ansehen">projekt ansehen</p>
+      </div>
+    </div>
+  </NuxtLink>
+</div>
+
         </div>
       </ContentList>
     </main>
@@ -126,11 +132,12 @@ p{
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.tag:hover{
+/* .tag:hover{
+
     background-color: black;
     color: white;
     border-radius: 4px;
-}
+} */
 
 .projekt--ansehen{
     color:#4700FF;

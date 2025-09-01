@@ -1,15 +1,15 @@
 ---
-eyebrow: 'editorial'
-title: "Flachdach Website"
-client: "Flachdach Planung Knüsel GmbH"
+eyebrow: 'Web'
+title: "Swiss Quiz Game"
+client: "Swiss per Zense GMBH"
 creator: "Dimitri Pfeifer"
-description: "Komplettes Redesign der Website passend zum bestehenden Logo. Programmierung der Website inkl. Migration des CMS von Joomla zu Webflow"
+description: "CD-Konformes UI-Design aufgrund von Wireframes"
 date: 2023-10-06
 draft: false
-tags: ['Web' , 'Redesign' , 'CMS' , '3d']
-thumbnail: './img/fladapla/5-iPhone.webp'
-slug: 'flachdach'
-logo-nav: 'flachdach'
+tags: ['Web' , 'UX/UI']
+thumbnail: './img/swiss/smartphone-swissquiz-5-1440x1707.png'
+slug: 'swiss'
+logo-nav: 'swiss'
 song: './25.06.28_father love-01-01.mp3'
 block: false
 
@@ -17,7 +17,7 @@ block: false
 
 
 
-::blogImg{src="./img/fladapla/1-MB.webp"}
+::blogImg{src="./img/swiss/smartphone-swissquiz-5-1440x1707.png"}
 ::
 
 

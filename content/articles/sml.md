@@ -1,28 +1,29 @@
 ---
-eyebrow: 'editorial'
-title: "Flachdach Website"
-client: "Flachdach Planung Knüsel GmbH"
+eyebrow: 'Webdesign'
+title: "SML Website"
+client: "Selbstmitgefühl leben"
 creator: "Dimitri Pfeifer"
-description: "Komplettes Redesign der Website passend zum bestehenden Logo. Programmierung der Website inkl. Migration des CMS von Joomla zu Webflow"
-date: 2023-10-06
+description: "Rebranding und komplettes Redesign der Website."
+date: 2024-10-06
 draft: false
-tags: ['Web' , 'Redesign' , 'CMS' , '3d']
-thumbnail: './img/fladapla/5-iPhone.webp'
-slug: 'flachdach'
-logo-nav: 'flachdach'
+tags: ['Web' , 'Redesign' , 'CMS']
+thumbnail: './img/selbstmitgefuehl-leben/SML_01-MB.jpg'
+slug: 'sml'
+logo-nav: 'sml'
 song: './25.06.28_father love-01-01.mp3'
+zeitaufwand: '40 Stunden'
 block: false
 
 ---
 
 
 
-::blogImg{src="./img/fladapla/1-MB.webp"}
+::blogImg{src="./img/selbstmitgefuehl-leben/SML-iphone-mockup.png"}
 ::
 
 
 
-::blogImg{src="./img/fladapla/6-iPhone.webp"}
+::blogImg{src="./img/SML_02-MB.jpg"}
 ::
 
 
@@ -34,7 +35,7 @@ Die bestehende Website musste technisch zeitgemäss angepasst werden.
 Im Rahmen des Auftrags haben wir die bestehenden Inhalte der alten Webseite zum Webflow CMS migriert.
 #leadright
 Die Struktur und das Design der Seite wurde komplett neu gestaltet, so dass es perfekt zu den bestehenden Werbemitteln (Logo & Bilder) passt.
-Das Titelbild der Landingpage wurde in Blender 3d modelliert und gerendert.
+Das Titelbild der Landingpage wurde in Blender 3d mosdelliert und gerendert.
 ::
 
 

@@ -6,7 +6,7 @@ creator: "Dimitri Pfeifer"
 description: "Für neonbLoom haben wir eine komplettes Redesign für ihren NEONSHOP gemacht. Von Kommunikationskonzept, einem neuen visuellen Erscheinungsbild bishin zur Programmierung der neuen Website"
 date: 2025-06-08
 draft: false
-tags: ['branding' , 'webdesign' , 'logo']
+tags: ['branding' , 'Web' , 'logo']
 thumbnail: 'img/neon/Neonshop-01-MB.jpg'
 slug: 'neonbloom'
 logo-nav: 'neonbloom'

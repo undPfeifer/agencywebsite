@@ -6,7 +6,7 @@ creator: "Dimitri Pfeifer"
 description: "Für die neu gegründete mobile Sagerei MOR haben wir das komplette Werbe- & Designkonzept umgesetzt"
 date: 2025-06-08
 draft: false
-tags: ['branding' , 'print' , 'grafik' , 'logo' , 'website']
+tags: ['branding' , 'print' , 'grafik' , 'logo' , 'Web']
 thumbnail: 'img/mor/MOBILE_WEB_MOCKUP.jpg'
 slug: 'mor'
 logo-nav: 'mor'
