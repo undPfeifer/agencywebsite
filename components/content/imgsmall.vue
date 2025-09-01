@@ -28,7 +28,7 @@ export default {
 
     img {
         width: auto;
-        max-width: 400px;
+        max-width: 500px;
         margin-top: -40px;
     }
 

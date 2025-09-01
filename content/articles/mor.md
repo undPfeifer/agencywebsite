@@ -14,7 +14,15 @@ song: '25.06.16_elyssian.mp3'
 block: false
 ---
 
+::ContentBtn{href="https://www.mobili-sagerei.ch/"}
+Live Website aufrufen
+::
 
+::blogImg{src="img/mor/web-landing-desktop.png"}
+::
+
+::blogImg{src="img/mor/web_desktop_2.webp"}
+::
 
 ::heading
 Logo
@@ -50,7 +58,8 @@ Besonderen Fokus haben wir darauf gelegt sie für Suchmaschinen zu optimieren. �
 Seit nun beinahe zwei Jahren ist MOR in Google an erster Stelle wenn man Mobile Sägerei sucht.
 ::
 
-
+::blogImg{src="img/mor/google.webp"}
+::
 
 ::lead 
 #leadleft 

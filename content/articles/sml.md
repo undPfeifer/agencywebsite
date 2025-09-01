@@ -16,10 +16,9 @@ block: false
 
 ---
 
-
-
-::blogImg{src="./img/selbstmitgefuehl-leben/SML-iphone-mockup.png"}
+::imgsmall{src="./img/selbstmitgefuehl-leben/SML-iphone-mockup.png"}
 ::
+
 
 
 
