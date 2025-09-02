@@ -49,7 +49,10 @@ Das Titelbild der Landingpage wurde in Blender 3d modelliert und gerendert.
 ::
 
 
-
+<TwoColGrid
+  src1="/img/fladapla/blender.webp"
+  src2="/img/fladapla/blender2.webp"
+/>
 
 
 ::ContentBtn{href="/kontakt"}

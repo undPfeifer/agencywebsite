@@ -27,7 +27,7 @@ Live Website aufrufen
 ::heading
 Logo
 ::
-::blogImg{src="img/mor/MOR-logo-stoff.jpg"}
+::imgsmall{src="img/mor/MOR-logo-stoff.jpg"}
 ::
 
 ::lead 
@@ -50,35 +50,36 @@ Visitenkarte
 Website
 ::
 
-::lead 
-#leadleft 
-Die Website haben wir von grundauf gestaltet und programmiert.
-#leadright 
-Besonderen Fokus haben wir darauf gelegt sie für Suchmaschinen zu optimieren. 🚀
-Seit nun beinahe zwei Jahren ist MOR in Google an erster Stelle wenn man Mobile Sägerei sucht.
-::
-
-::blogImg{src="img/mor/google.webp"}
-::
-
-::lead 
-#leadleft 
-ChatGpt 
-#leadright 
-Wir haben die Website mittlerweile auch so strukturiert, dass gängige KI-Modelle gut auf sie zugreifen können. 
-Das Resultat: ChatGpt empfielt MOR an erster Stelle! 
-Testen Sie es selbst-> https://chatgpt.com/share/686d8abf-ba50-8011-bd2e-7f1938c1fb61
-::
-
-::blogImg{src="img/mor/gpt-1.webp"}
-::
-
 
 ::blogImg{src="img/mor/MOBILE_WEB_MOCKUP.jpg"}
 ::
 
 
-<contentbtn href="https://www.mobili-sagerei.ch/">live-website aufrufen</contentbtn>
+::lead 
+#leadleft 
+SEO
+#leadright 
+Besonderen Wert haben wir auf die Suchmaschinenoptimierung gelegt. 🚀 Seit fast zwei Jahren ist MOR bei Google auf Platz 1, wenn man nach Mobile Sägerei sucht.
+::
+
+::imgsmall{src="img/mor/google.webp"}
+::
+
+::lead 
+#leadleft 
+AI-freundliches Webdesign
+
+
+#leadright 
+Mittlerweile haben wir die Website so strukturiert, dass auch gängige KI-Modelle optimal auf sie zugreifen können. Das Ergebnis: ChatGPT empfiehlt MOR an erster Stelle! 
+Testen Sie sich selbst 👉 https://chatgpt.com/share/686d8abf-ba50-8011-bd2e-7f1938c1fb61
+::
+
+::imgsmall{src="img/mor/gpt-1.webp"}
+::
+
+
+
 
 
 
@@ -100,14 +101,13 @@ Fotografie
 ::
 
 
-::blogImg{src="/img/mor/foto-02.jpg"}
+::imgsmall{src="/img/mor/foto-02.jpg"}
 ::
+
 ::blogImg{src="/img/mor/foto-03.jpg"}
 ::
 
 
-::blogImg{src="/img/jahrbuch/s1-2.png"}
-::
 
 ::ContentBtn{href="/kontakt"}
 kontakt
