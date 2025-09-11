@@ -1,12 +1,12 @@
 ---
 eyebrow: 'branding'
 title: "kunst &kultur"
-client: "unkreativist"
+client: "idk kunstkollektiv"
 creator: "Dimitri Pfeifer & Sven Langone"
-description: "Für die neu gegründete mobile Sagerei MOR haben wir das komplette Werbe- & Designkonzept umgesetzt"
+description: ""
 date: 2025-06-08
 draft: false
-tags: ['branding' , 'website' , 'grafik' , 'logo' ]
+tags: ['kunst' , ]
 thumbnail: 'img/kunst/cover.jpg'
 slug: 'kunst'
 logo-nav: 'kunst'
@@ -16,78 +16,32 @@ block: false
 
 
 
-::heading
-Logo
-::
-::blogImg{src="img/kunst/animationdedimi.gif"}
-::
 
-::lead 
-#leadleft 
-Die Bildmarke des ist inspiriert von der Form des Sägeblatts das MOR mit ihrer Maschine benutzt.
-#leadright 
-Das M soll die Charakteristik des Handwerks wiederspiegeln. Stark und beständig, mit scharfen sauberen Kanten wie sie die Säge macht. Die simple Formsprache ermöglicht es die Bildmarke M als Gestaltungselement bei diversen Werbemitteln zu verwenden.
-::
-
-
-::heading
-Visitenkarte
-::
-
-::blogImg{src="img/kunst/a1345182316_16.jpeg"}
-::
-
-::lead 
-#leadleft 
-Webdesign und Umsetzung
-#leadright 
-Die Website haben wir .....gestaltet und programmiert.
-::
-
-::heading
-Website
-::
-
-<contentbtn href="https://www.mobili-sagerei.ch/">live-website aufrufen</contentbtn>
-
-
-::blogImg{src="img/mor/MOBILE_WEB_MOCKUP.jpg"}
+::imgsmall{src="img/kunst/animationdedimi.gif"}
 ::
 
 
 
 
-
-
-
-::heading
-Flyer
+::imgsmall{src="img/kunst/a1345182316_16.jpeg"}
 ::
 
-::blogImg{src="/img/mor/Mockup_Brochure_4.webp"}
-::
-::blogImg{src="/img/mor/MOR-Mockup-01.webp"}
+::blogImg{src="img/kunst/pilatus-xl.webp"}
 ::
 
-
-
-::heading
-Fotografie
+::imgsmall{src="img/kunst/pilatus_xs.webp"}
 ::
 
-
-::blogImg{src="/img/mor/foto-02.jpg"}
+::imgsmall{src="img/kunst/nichtraucher.webp"}
 ::
-::blogImg{src="/img/mor/foto-03.jpg"}
+
+::imgsmall{src="img/kunst/zappa-39.png"}
+::
+
+::imgsmall{src="img/kunst/huegel-plakat.webp"}
 ::
 
 
-::blogImg{src="/img/jahrbuch/s1-2.png"}
-::
-
-::ContentBtn{href="/kontakt"}
-kontakt
-::
 
 
 
