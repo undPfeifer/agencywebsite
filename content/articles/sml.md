@@ -30,21 +30,13 @@ block: false
 
 ::lead
 #leadleft
-Die bestehende Website musste technisch zeitgemäss angepasst werden.
-Im Rahmen des Auftrags haben wir die bestehenden Inhalte der alten Webseite zum Webflow CMS migriert.
+Die bestehende Website wurde technisch auf den neuesten Stand gebracht.
+Im Zuge des Projekts haben wir die Inhalte der alten Webseite in das Webflow CMS migriert.
 #leadright
-Die Struktur und das Design der Seite wurde komplett neu gestaltet, so dass es perfekt zu den bestehenden Werbemitteln (Logo & Bilder) passt.
-Das Titelbild der Landingpage wurde in Blender 3d mosdelliert und gerendert.
+Gemeinsam mit Selbstmitgefühl Leben entwickelten wir eine Corporate Identity, die als Grundlage für die neue Designsprache dient.
+Im Rahmen des Redesign haben wir sämtliche Gestaltungselemente neu definiert.
 ::
 
-
-::blogImg{src="./img/fladapla/3-MB.webp"}
-::
-
-
-
-::blogImg{src="./img/fladapla/4-MB.webp"}
-::
 
 
 

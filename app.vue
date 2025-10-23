@@ -6,8 +6,8 @@
   useSeoMeta({
   title: 'studio&pfeifer',
   ogTitle: '&pfeifer Grafik & Webdesign',
-  description: 'Ihr Partner zur Umsetzung visueller Kommunikationslösungen. ',
-  ogDescription: 'Ihr Partner zur Umsetzung visueller Kommunikationslösungen. ',
+  description: 'Kleine Agentur für Grafik und Webdesign in Zürich ',
+  ogDescription: 'Kleine Agentur für Grafik und Webdesign in Zürich',
   ogImage: 'https://www.undpfeifer.ch/agencywebsite/img/kunst/cover.jpg',
   twitterCard: 'summary_large_image',
 })

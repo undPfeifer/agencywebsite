@@ -27,7 +27,7 @@
     },
     methods: {
       handleClick() {
-        const encoded = 'ZGltaXRyaS5wZmVpZmVyQGdteC5uZXQK'; // base64 encoded
+        const encoded = 'a29udGFrdEB1bmRwZmVpZmVyLmNo'; // base64 encoded
         const decoded = atob(encoded).trim(); // decode and remove trailing newline
   
         if (!this.emailShown) {

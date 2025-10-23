@@ -1,5 +1,6 @@
 <template>
   <main>
+    <PageLoad />
     <landingHeader />
     <ContentList path="/" v-slot="{ list }">
      
@@ -12,6 +13,7 @@
         </div>
       </div>
     </ContentList>
+    <Marquee />
   </main>
 </template>
 

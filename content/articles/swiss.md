@@ -3,7 +3,7 @@ eyebrow: 'Web'
 title: "Swiss Quiz Game"
 client: "Swiss per Zense GMBH"
 creator: "Dimitri Pfeifer"
-description: "CD-Konformes UI-Design aufgrund von Wireframes"
+description: "Entwicklung eines Corporate-Design-konformen UI-Designs auf Basis von Wireframes."
 date: 2023-10-06
 draft: false
 tags: ['Web' , 'UX/UI']
@@ -28,7 +28,7 @@ block: false
 #leadleft
 Für die Fluggesellschaft SWISS hat Dimitri als Freelancer mit der Zense GmbH ein Screendesign für eine interaktive Quiz-App entwickelt.
 #leadright
-Besonderes Augenmerk haben wir darauf gelegt das Corporate Design von SWISS zu verwenden. Die Illustrationen wurden von Zense GMBH gesaltet.
+Besonderes Augenmerk haben wir darauf gelegt das Corporate Design von SWISS zu verwenden. Die Illustrationen wurden von Zense GMBH gestaltet.
 
 ::
 

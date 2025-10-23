@@ -16,7 +16,7 @@ block: false
 
 ---
 
-::ContentBtn{href="https://www.fabbricareleuropa.uzh.ch/desktop"}
+::ContentBtn{href="https://www.fabbricareleuropa.uzh.ch/desktop/title"}
 Live Website ansehen
 ::
 
