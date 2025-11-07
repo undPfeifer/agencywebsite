@@ -16,8 +16,8 @@
   const people = [
     {
       name: 'dimi',
-      text: 'Dimitri Pfeifer | Grafik / Webdesign / HTML CSS JS VUE3 NUXT4 / WEBFLOW WORDPRESS SHOPIFY / 3D Design und Animation / Branding / Flyer / Logo / Plakate / Hirsch mit Marroni'
-    },
+      text: 'Dimitri Pfeifer | Grafik / Webdesign / HTML CSS JS VUE3 NUXT4 / WEBFLOW WORDPRESS SHOPIFY / 3D Design und Animation / Branding / Flyer / Logo / Plakate'
+    }, /*
     {
       name: 'vivi',
       text: 'Viviane Ammann | Grafik / Branding / Animation 2D / Illustration / Editorial / Sunrise Salmon'
@@ -25,7 +25,7 @@
     {
       name: 'julius',
       text: 'Marco Bosshard | Backoffice / Strategie / Office 365 / Röschti mit Bratwurst und Spiegelei'
-    }
+    } */
   ]
   </script>
   

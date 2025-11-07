@@ -4,6 +4,8 @@
 
 
 <template>
+
+
     <article class="master--container">
         <ContentDoc :path="`/articles/${slug}`" v-slot= "{ doc }"> 
         <!-- {{ doc }} -->

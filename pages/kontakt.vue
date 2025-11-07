@@ -1,5 +1,6 @@
 <template>
     <section>
+
         <img src="/img/kontakt-1.webp" alt="">
 
         <h1>Für unverbindliche Hallos oder absolute Notfälle :)</h1>
