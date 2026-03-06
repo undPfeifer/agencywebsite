@@ -1,0 +1,7 @@
+Farben:
+
+Schwarz:
+#1e1e1b
+
+Lila:
+#baafe4
